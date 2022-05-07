@@ -18,13 +18,17 @@ p:2rem
   02 colors
   -primary:   #e67e22
   -Tints: #fdf2e9 #fae5d3
-  -shades:#b8651b #8a4c14 #170d03
+  -shades:#b8651b #8a4c14 #170d03 #eb984e #45260a
   -Accents:
-  -greys: #555
+  -greys: #555 #aaa
 
  03 img: unsplash(free source) or for faces uifaces.co
 
  04 shadow
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+ box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+ box-shadow: inset 0 0 0 0.3rem #fff;
 
  05 Border-Radius:9,11
 
@@ -61,19 +65,13 @@ body {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 6.4rem;
+  /* margin-bottom: 9.6rem; */
 }
-.grid-2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid-3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid-4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-.grid-align-items {
-  align-items: center;
-}
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+/* another way of doing the same as above */
+
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -106,8 +104,21 @@ body {
   font-weight: 500;
   text-transform: uppercase;
 }
-strong {
-  font-weight: 500;
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.9rem;
+  transition: all 0.3s;
+  /* only for btn class at cta */
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
 }
 
 .btn-primary:link,
@@ -132,19 +143,17 @@ strong {
   /* for inside border */
   box-shadow: inset 0 0 0 0.3rem #fff;
 }
-
-.margin-right-sm {
-  /* !important means nothing can overwrite it */
-  margin-right: 1.6rem !important ;
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn-form:hover {
+  background-color: #fdf2e9;
+  color: #45260a;
 }
 
-.margin-bottom-md {
-  margin-bottom: 4.8rem !important;
-}
-
-.center-text {
-  text-align: center;
-}
 .link:link,
 .link:visited {
   display: inline-block;
@@ -159,4 +168,69 @@ strong {
 .link:active {
   color: #b8651b;
   border-bottom: 0.01rem solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  color: #e67e22;
+  height: 3rem;
+  width: 3rem;
+}
+.list li {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+.list span {
+  font-size: 1.8rem;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 2px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+/*######################*/
+/* Helper class */
+/*######################*/
+
+.margin-right-sm {
+  /* !important means nothing can overwrite it */
+  margin-right: 1.6rem !important ;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-align-items {
+  align-items: center;
+}
+
+strong {
+  font-weight: 500;
 }
