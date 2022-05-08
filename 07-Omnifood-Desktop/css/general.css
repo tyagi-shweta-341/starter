@@ -20,7 +20,7 @@ p:2rem
   -Tints: #fdf2e9 #fae5d3
   -shades:#b8651b #8a4c14 #170d03 #eb984e #45260a
   -Accents:
-  -greys: #555 #aaa
+  -greys: #555 #aaa #767676
 
  03 img: unsplash(free source) or for faces uifaces.co
 
@@ -226,6 +226,9 @@ body {
 }
 .grid-4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 .grid-align-items {
   align-items: center;

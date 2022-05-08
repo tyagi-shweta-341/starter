@@ -26,7 +26,7 @@
   display: inline-block;
   text-decoration: none;
   font-size: 1.8rem;
-  color: #555;
+  color: #170d03;
   transition: all 0.3s;
 }
 .header-nav-link:hover,
@@ -115,7 +115,8 @@
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.4rem;
+  color: #767676;
 }
 
 .logos {
@@ -428,7 +429,7 @@
 /* Section CTA */
 /*######################*/
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem 0;
 }
 .cta {
   display: grid;
@@ -501,4 +502,76 @@
     url(../img/eating.jpg);
   background-size: cover;
   background-position: center;
+}
+
+/*######################*/
+/* Footer */
+/*######################*/
+.footer {
+  padding: 12.8rem 0;
+  border: 1px solid #eb984e;
+}
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-list ion-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.address {
+  margin-block: 2.4rem;
+}
+
+.footer-list:link,
+.footer-list:visited {
+  text-decoration: none;
+  color: #767676;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+.footer-list:hover,
+.footer-list:active {
+  color: #555;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
