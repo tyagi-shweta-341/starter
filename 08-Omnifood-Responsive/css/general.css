@@ -47,6 +47,8 @@ box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
 html {
   /* font-size: 10px; This means 1rem=10px(otherwise 1 rem is always equals 16px)  IMP:we donot use this, it create problem for user*/
   font-size: 62.5%; /* means 62.5% a/c to user's browser font size setting (10px/16px = .625)*/
+
+  overflow-x: hidden;
 }
 
 body {
@@ -54,6 +56,8 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #555;
+  /* overflow will not work if something is position absolute to relative body */
+  overflow-x: hidden;
 }
 
 .container {
@@ -183,6 +187,8 @@ body {
   width: 3rem;
 }
 .list li {
+  font-size: 1.8rem;
+  line-height: 1.2;
   display: flex;
   gap: 1.6rem;
   align-items: center;
@@ -227,9 +233,7 @@ body {
 .grid-4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-.grid-5-cols {
-  grid-template-columns: repeat(5, 1fr);
-}
+
 .grid-align-items {
   align-items: center;
 }
