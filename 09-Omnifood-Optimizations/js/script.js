@@ -65,7 +65,6 @@ const sectionHeroEl = document.querySelector(".section-hero");
 const observer = new IntersectionObserver(
   function (entries) {
     const entry = entries[0];
-    console.log(entry);
 
     if (entry.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -104,6 +103,5 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
-console.log("Hello");
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
